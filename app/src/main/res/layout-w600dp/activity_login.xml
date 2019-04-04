@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lyt_wholelayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+
+    android:id="@+id/lyt_login_wholelayout"
+    android:background="@color/primaryColor"
+    >
+    <RelativeLayout
+        android:id="@+id/lyt_logindetailsholder"
+        android:layout_centerInParent="true"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/logo_image"
+        android:layout_marginBottom="@dimen/login_logo_vertical_margin"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_centerHorizontal="true"
+        android:src="@color/primaryLightColor"
+        app:civ_border_width="0dp"
+        app:civ_border_color="#FF000000"/>
+
+    <LinearLayout
+    android:id="@+id/lyt_emailholder"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="100"
+    android:layout_below="@+id/logo_image"
+    android:layout_height="wrap_content">
+    <View
+        android:layout_width="0dp"
+        android:layout_weight="20"
+        android:layout_height="@dimen/login_edt_height"/>
+
+    <EditText
+        android:id="@+id/edt_loginusername"
+        android:layout_weight="60"
+        android:layout_width="0dp"
+        android:minHeight="@dimen/login_edt_height"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dip"
+        android:paddingBottom="5dip"
+        android:paddingRight="10dip"
+        android:paddingLeft="30dip"
+        android:imeOptions="actionNext|flagNoExtractUi"
+        android:maxLines="1"
+        android:hint="@string/prompt_email"
+        android:textColorHint="@color/colorLoginEdtHint"
+        android:background="@drawable/edittext_selector" />
+    <View
+        android:layout_width="0dp"
+        android:layout_weight="20"
+        android:layout_height="@dimen/login_edt_height"/>
+</LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lyt_passwordholder"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        android:layout_below="@+id/lyt_emailholder"
+        android:layout_height="wrap_content">
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="20"
+            android:layout_height="@dimen/login_edt_height"/>
+
+        <EditText
+            android:id="@+id/edt_loginpassword"
+            android:layout_weight="60"
+            android:layout_width="0dp"
+            android:minHeight="@dimen/login_edt_height"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dip"
+            android:paddingBottom="5dip"
+            android:paddingRight="10dip"
+            android:paddingLeft="30dip"
+            android:imeOptions="actionGo|flagNoExtractUi"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:hint="@string/prompt_password"
+            android:textColorHint="@color/colorLoginEdtHint"
+            android:background="@drawable/edittext_selector" />
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="20"
+            android:layout_height="@dimen/login_edt_height"/>
+    </LinearLayout>
+
+    <TextView
+    android:id="@+id/forgot_password"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="12dp"
+    android:layout_marginStart="3dp"
+    android:layout_below="@id/lyt_passwordholder"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:text="@string/forgot_password_new"
+    android:textColor="@color/colorLoginForgot"
+    android:visibility="visible"
+    android:layout_marginTop="@dimen/login_logo_vertical_margin"
+    android:layout_centerHorizontal="true"/>
+
+
+    <TextView
+        android:id="@+id/login_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/forgot_password"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:text="@string/action_log_in"
+        android:textAllCaps="true"
+        android:textColor="@color/colorLoginForgot"
+        android:visibility="visible"
+        android:textStyle="bold"
+        android:textSize="@dimen/login_header_text"
+        android:layout_marginTop="@dimen/login_logo_vertical_margin"
+        android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        android:id="@+id/anim_layout"
+        android:gravity="end"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/login_logo_vertical_margin"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="55"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginLeft= "@dimen/activity_horizontal_margin"
+            android:minHeight="@dimen/login_button_height">
+
+            <ImageView
+                android:id="@+id/imgtwitter"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_weight="33"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_twitter_32" />
+
+            <ImageView
+                android:id="@+id/imglinekedin"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_weight="33"
+                android:src="@drawable/ic_linkedin_32" />
+
+            <ImageView
+                android:id="@+id/imgfacebook"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_centerVertical="true"
+                android:layout_weight="33"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:src="@drawable/ic_facebook_32" />
+        </RelativeLayout>
+
+
+
+    <TextView
+        android:id="@+id/signup_navigation"
+        android:layout_width="0dp"
+        android:minHeight="@dimen/login_button_height"
+        android:layout_height="wrap_content"
+        android:layout_weight="45"
+        android:text="@string/action_sign_up_navigation"
+        android:textAllCaps="true"
+        android:textAlignment="center"
+android:background="@drawable/halfrounded_signnav"
+        android:textColor="@color/colorLoginForgot"
+        android:visibility="gone"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textSize="@dimen/login_navigation_text"
+        android:layout_centerHorizontal="true"/>
+
+
+    </LinearLayout>
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/lyt_signup_wholelayout"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:background="@color/secondaryColor">
+
+        <RelativeLayout
+            android:id="@+id/lyt_signupdetailsholder"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/signup_logo_image"
+            android:layout_marginBottom="@dimen/login_logo_vertical_margin"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_centerHorizontal="true"
+            android:src="@color/secondaryLightColor"
+            app:civ_border_width="0dp"
+            app:civ_border_color="#FF000000"/>
+
+        <LinearLayout
+            android:id="@+id/lyt_signupemailholder"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            android:layout_below="@+id/signup_logo_image"
+            android:layout_height="wrap_content">
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="20"
+                android:layout_height="@dimen/login_edt_height"/>
+
+            <EditText
+                android:id="@+id/edt_signupusername"
+                android:layout_weight="60"
+                android:layout_width="0dp"
+                android:minHeight="@dimen/login_edt_height"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dip"
+                android:paddingBottom="5dip"
+                android:paddingRight="10dip"
+                android:paddingLeft="30dip"
+                android:imeOptions="actionNext|flagNoExtractUi"
+                android:maxLines="1"
+                android:hint="@string/prompt_email"
+                android:textColorHint="@color/colorLoginEdtHint"
+                android:background="@drawable/signup_edittext_selector" />
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="20"
+                android:layout_height="@dimen/login_edt_height"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lyt_signuppasswordholder"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            android:layout_below="@+id/lyt_signupemailholder"
+            android:layout_height="wrap_content">
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="20"
+                android:layout_height="@dimen/login_edt_height"/>
+
+            <EditText
+                android:id="@+id/edt_signuppassword"
+                android:layout_weight="60"
+                android:layout_width="0dp"
+                android:minHeight="@dimen/login_edt_height"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dip"
+                android:paddingBottom="5dip"
+                android:paddingRight="10dip"
+                android:paddingLeft="30dip"
+                android:imeOptions="actionGo|flagNoExtractUi"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:hint="@string/prompt_password"
+                android:textColorHint="@color/colorLoginEdtHint"
+                android:background="@drawable/signup_edittext_selector" />
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="20"
+                android:layout_height="@dimen/login_edt_height"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lyt_confirmpasswordholder"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            android:layout_below="@+id/lyt_signuppasswordholder"
+            android:layout_height="wrap_content">
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="20"
+                android:layout_height="@dimen/login_edt_height"/>
+
+            <EditText
+                android:id="@+id/edt_signupconpassword"
+                android:layout_weight="60"
+                android:layout_width="0dp"
+                android:minHeight="@dimen/login_edt_height"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dip"
+                android:paddingBottom="5dip"
+                android:paddingRight="10dip"
+                android:paddingLeft="30dip"
+                android:imeOptions="actionGo|flagNoExtractUi"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:hint="@string/prompt_confirmpassword"
+                android:textColorHint="@color/colorLoginEdtHint"
+                android:background="@drawable/signup_edittext_selector" />
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="20"
+                android:layout_height="@dimen/login_edt_height"/>
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/signup_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lyt_confirmpasswordholder"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:text="@string/action_sign_up"
+            android:textAllCaps="true"
+            android:textColor="@color/colorLoginForgot"
+            android:visibility="visible"
+            android:textStyle="bold"
+            android:textSize="@dimen/login_header_text"
+            android:layout_marginTop="@dimen/login_logo_vertical_margin"
+            android:layout_centerHorizontal="true"/>
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            android:id="@+id/anim_signup_layout"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/login_logo_vertical_margin"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/login_navigation"
+                android:layout_width="0dp"
+                android:layout_weight="45"
+                android:minHeight="@dimen/login_button_height"
+                android:layout_height="wrap_content"
+                android:text="@string/action_login_navigation"
+                android:textAllCaps="true"
+                android:textAlignment="center"
+                android:background="@drawable/halfrounded_login"
+                android:textColor="@color/colorLoginForgot"
+                android:visibility="gone"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textSize="@dimen/login_navigation_text"
+                android:layout_centerHorizontal="true"/>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="55"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginLeft= "@dimen/activity_horizontal_margin"
+                android:minHeight="@dimen/login_button_height">
+
+                <ImageView
+                    android:id="@+id/imgsignuptwitter"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_weight="33"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/ic_twitter_32" />
+
+                <ImageView
+                    android:id="@+id/imgsignuplinekedin"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_weight="33"
+                    android:src="@drawable/ic_linkedin_32" />
+
+                <ImageView
+                    android:id="@+id/imgsignupfacebook"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="33"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:src="@drawable/ic_facebook_32" />
+            </RelativeLayout>
+
+
+
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

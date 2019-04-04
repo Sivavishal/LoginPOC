@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">LoginPOC</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="prompt_confirmpassword">Confirm Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_up">Sign Up</string>
+    <string name="action_log_in">Log in</string>
+    <string name="action_sign_up_navigation">OR SIGN UP</string>
+    <string name="action_login_navigation">OR LOG IN</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="forgot_password_new">Forgot Password?</string>
+
+    <string name="no_internet">No internet connection!</string>
+
+    <string name="username_error">Please enter username</string>
+    <string name="password_error">Please enter password</string>
+    <string name="invalid_credentials">Invalid Credentials!</string>
+    <string name="generic_error">Something went wrong! Please try again!</string>
+    <string name="network_error">No connectivity! Please check your internet connection and try again!</string>
+    <string name="contact_help_desk">Please Contact Help Desk</string>
+    <string name="cbre_policy_url">https://www.cbre.com.au/about/privacy-policy</string>
+    <string name="cbre_support_url">https://www.cbre.com.au/about/contact-us</string>
+
+</resources>

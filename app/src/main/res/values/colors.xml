@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorLoginEdtHint">#FFF7F7</color>
+    <color name="colorLoginForgot">#F7FFFF</color>
+    <color name="colorSignUpPrimary">#05124c</color>
+
+
+    <color name="primaryColor">#f832bb</color>
+    <color name="primaryLightColor">#ff70ee</color>
+    <color name="primaryDarkColor">#c1008b</color>
+    <color name="secondaryColor">#041249</color>
+    <color name="secondaryLightColor">#393775</color>
+    <color name="secondaryDarkColor">#000023</color>
+    <color name="primaryTextColor">#000000</color>
+    <color name="secondaryTextColor">#ffffff</color>
+
+    <!-- Crouton Alert styles -->
+    <dimen name="crouton_padding">16dp</dimen>
+    <color name="crouton_text">#fff</color>
+    <color name="bg_confirm">#98cd59</color>
+    <color name="bg_alert">#e84c4c</color>
+    <color name="bg_info">#f2b64f</color>
+
+
+</resources>
