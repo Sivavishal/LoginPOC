@@ -138,7 +138,7 @@
         android:id="@+id/anim_layout"
         android:gravity="end"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="@dimen/login_logo_vertical_margin"
+        android:layout_marginBottom="@dimen/bottom_nav_margin"
         android:layout_height="wrap_content">
         <RelativeLayout
             android:layout_width="0dp"
@@ -369,7 +369,7 @@ android:background="@drawable/halfrounded_signnav"
             android:weightSum="100"
             android:id="@+id/anim_signup_layout"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="@dimen/login_logo_vertical_margin"
+            android:layout_marginBottom="@dimen/bottom_nav_margin"
             android:layout_height="wrap_content">
 
             <TextView
